@@ -1,5 +1,8 @@
 # MotionFlow
 
+> [!IMPORTANT]
+> MotionFlow has been discontinued and is no longer maintained. Its Motion Photo functionality has been merged into [PicForge](https://github.com/DejavuMoe/PicForge). Please use PicForge for current development, bug fixes, and future updates. This repository is retained for historical reference.
+
 This is a Next.js application built in Firebase Studio that allows users to extract still images and video clips from Android Motion Photos. All processing is done client-side for privacy.
 
 ## Features
@@ -29,7 +32,7 @@ For the best experience, please use a modern web browser.
 ## FAQ
 
 **Q: Why can't my photos from a VIVO or iQOO phone be processed?**
-A: Currently, Motion Photos from VIVO and iQOO devices are not supported because they do not follow Google's official Motion Photo format specifications. This may be addressed in a future update.
+A: Motion Photos from VIVO and iQOO devices are not supported in this archived codebase because they do not follow Google's official Motion Photo format specifications. For current support and updates, please see [PicForge](https://github.com/DejavuMoe/PicForge).
 
 **Q: Which phone brands have been tested?**
 A: The application has been successfully tested with Motion Photos from the following brands:
@@ -55,33 +58,16 @@ A: The application has been successfully tested with Motion Photos from the foll
 .
 ├── src
 │   ├── app
-│   │   ├── globals.css         # Global styles and Tailwind CSS configuration.
-│   │   ├── layout.tsx          # Root layout of the application.
-│   │   └── page.tsx            # The main page component for the application.
-│   │
 │   ├── components
-│   │   ├── ui/                 # UI components from ShadCN.
-│   │   ├── logo.tsx            # The application logo component.
-│   │   └── motion-flow-processor.tsx # The core component handling file uploads, processing, and display of results.
-│   │
 │   ├── hooks
-│   │   └── use-toast.ts        # Custom hook for displaying toast notifications.
-│   │
 │   └── lib
-│       └── motion-photo.ts     # Core logic for parsing JPEG Motion Photos to extract image and video data.
-│
-├── public/                     # Static assets.
-├── package.json                # Project dependencies and scripts.
-└── tailwind.config.ts          # Tailwind CSS configuration file.
 ```
 
 ### Key Dependencies in `package.json`
 
-- `"next"`: The core framework for the application, handling routing, rendering, and more.
-- `"react"`, `"react-dom"`: The library for building the user interface.
-- `"tailwindcss"`: A utility-first CSS framework for styling.
-- `"lucide-react"`: A library for icons used throughout the application.
-- `"class-variance-authority"`, `"clsx"`, `"tailwind-merge"`: Utilities for managing and merging Tailwind CSS classes.
-- `"@radix-ui/react-slot"`, `"@radix-ui/react-toast"`: Low-level UI primitives that power some of the ShadCN components.
-- `"jszip"`: A library for creating, reading, and editing `.zip` files, used for the "Download All" feature.
-- `"typescript"`: Provides static typing for the project, improving code quality and maintainability.
+- `next`
+- `react`
+- `react-dom`
+- `tailwindcss`
+- `jszip`
+- `typescript`
